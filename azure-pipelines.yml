@@ -12,5 +12,5 @@ pool:
 steps:
 - task: richardfennellBM.BM-VSTS-PesterRunner-Task.Pester-Task.Pester@8
   inputs:
-    scriptFolder: '@{Path=''$(System.DefaultWorkingDirectory)\AzureBatch\armTemplateTest.ps1'';parameters=@{templatePath=''$(System.DefaultWorkingDirectory)\AzureBatch\*.json''}}'
-    resultsFile: '$(System.DefaultWorkingDirectory)\Test-Pester.XML'
+    scriptFolder: '@{Path=''$(Build.SourcesDirectory)\AzureBatch\armTemplateTest.ps1'';parameters=@{templatePath=''$(Build.SourcesDirectory)\AzureBatch\*.json''}}'
+    resultsFile: '$(Build.SourcesDirectory)\Test-Pester.XML'
